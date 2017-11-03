@@ -1,0 +1,12 @@
+<h1>Events#new</h1>
+<p>Find me in app/views/events/new.html.erb</p>
+
+<%= form_for @event do |f| %>
+Nom<%= f.text_field (:description) %><br/>
+Date<%= f.date_field (:date) %><br/>
+Lieu<%= f.text_field (:place) %><br/>
+Créateur<%= f.collection_select(:creator_id, User.all, :id, :name) %><br/>
+<%= f.submit "Créer" %><br/>
+<% end %>
+	
+<%= link_to 'back', events_path %>

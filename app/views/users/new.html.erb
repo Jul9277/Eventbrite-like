@@ -1,9 +1,9 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Inscrivez-vous!</h1>
+<p>créez votre compte pour voir les meetups et en créer de nouveaux</p>
 
-<%= form_for @user, url: users_create_path do |f| %>
+<%= form_for @user do |f| %>
 <%= f.text_field (:name) %>
 <%= f.submit "Créer" %>
 <% end %>
 	
-<%= link_to 'back', users_show_path %>
+<%= link_to 'back', users_path %>

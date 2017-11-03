@@ -1,0 +1,27 @@
+<h1>Les utilisateurs</h1>
+<p>L'activité au sein de notre communauté</p>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Created events</th>
+		<th>Participated events</th>
+	</tr>
+<% @users.each do |user| %>
+	<tr>
+		
+		<td>
+			<%= user.name %>
+		</td>
+		<td>
+			<%= user.created_events.count %>
+		</td>
+
+		<td>
+			<%= user.participated_events.count %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+<%= link_to 'new', new_user_path %>
