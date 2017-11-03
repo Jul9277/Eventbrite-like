@@ -1,17 +1,19 @@
 <h1>Les utilisateurs</h1>
 <p>L'activité au sein de notre communauté</p>
 
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Created events</th>
-		<th>Participated events</th>
-	</tr>
+<table class="table">
+	<thead class="thead-light">
+		<tr>
+			<th>Name</th>
+			<th>Created events</th>
+			<th>Participated events</th>
+		</tr>
+	</thead>
 <% @users.each do |user| %>
 	<tr>
 		
 		<td>
-			<%= user.name %>
+			<%= link_to user.name, user_path(user.id) %>
 		</td>
 		<td>
 			<%= user.created_events.count %>

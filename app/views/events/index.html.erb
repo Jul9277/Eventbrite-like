@@ -1,11 +1,14 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<h1>Les évènements </h1>
+<p>Parcourez la page et choisissez l'évènements qui vous corresponds, enjoy!</p>
 
-<table>
-	<tr>
-		<th>Name</th>
-		<th></th>
-	</tr>
+<table class="table">
+	<thead class="thead-light">
+		<tr>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Lieu</th>
+		</tr>
+	</thead>
 <% @events.each do |event| %>
 	<tr>
 		
@@ -17,9 +20,6 @@
 		</td>
 		<td>
 			<%= event.place %>
-		</td>
-		<td>
-			<%= event.creator.name %>
 		</td>
 	</tr>
 <% end %>
